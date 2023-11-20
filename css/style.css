@@ -1,0 +1,1003 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+    box-sizing: border-box;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 65%;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    -webkit-transition: all .4s linear;
+    transition: all .4s linear;
+}
+
+:root {
+    --left-bg: rgba(1, 112, 219, 0.7);
+    --right-bg: rgba(36, 151, 42, 0.7);
+    --color-play: rgba(1, 112, 219, 1);
+    --color-xbox: rgba(36, 151, 42, 1);
+    --color-play-dark: rgba(0, 30, 100, 1);
+    --color-xbox-dark : rgb(2, 117, 26);
+    --blacK: #000;
+    --white: #fff;
+    --hover-width: 75%;
+    --other-width: 25%;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+.body-play {
+    background: url(../img/bg-play.webp);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+.body-xbox {
+    background: url(https://fondosmil.com/fondo/55600.jpg);
+    background-attachment: fixed;
+    overflow-x: hidden;
+    background-size: cover;
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+article {
+    padding: 2rem 7%;
+}
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color: #fff;
+    margin: 0;
+    padding: .5rem 0 1.3rem 0;
+}
+
+.split h2 {
+    font-size: 5rem;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%);
+    white-space: nowrap;
+}
+
+.btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%);
+    text-decoration: none;
+    color: #fff;
+    border: #fff solid 0.4rem;
+    font-size: 1.7rem;
+    width: 20rem;
+    padding: 1.5rem;
+}
+
+.btn-one {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .8rem 1rem;
+    border-radius: .5rem;
+    color: var(--color-play);
+    border: var(--color-play) solid 0.2rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-one:hover {
+    color: var(--white);
+    background: var(--color-play);
+}
+
+.btn-two {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 1rem;
+    border-radius: .5rem;
+    color: #fff;
+    background: var(--color-play);
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-two:hover {
+    background: rgb(9, 136, 255);
+}
+
+.body-xbox .btn-two {
+    background: var(--color-xbox);
+}
+
+.body-xbox .btn-two:hover {
+    color: var(--white);
+    background: rgba(1, 126, 0, 1);
+}
+
+.body-xbox .btn-one {
+    color: var(--white);
+    border: var(--white) solid 0.2rem;
+}
+
+.body-xbox .btn-one:hover {
+    background: white;
+    color: var(--blacK);
+}
+
+
+.heading-text h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    color: #fff;
+    margin: 2rem;
+}
+
+.cruz {
+    color: var(--color-xbox);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.circle {
+    color: rgb(223, 23, 23);
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.a {
+    color: var(--color-play);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.b {
+    color: rgb(223, 23, 23);
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+/* Index */
+.left .btn:hover {
+    border: var(--color-play);
+    background: var(--color-play);
+}
+
+.right .btn:hover {
+    border: var(--color-xbox);
+    background: var(--color-xbox);
+}
+
+.heading {
+    background: url(https://fondosmil.com/fondo/49754.jpg);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.split.left {
+    left: 0;
+    background: url(https://wallpapercave.com/wp/wp6560185.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.split.left::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--left-bg);
+}
+
+.split.right {
+    right: 0;
+    background: url(https://as01.epimg.net/meristation/imagenes/2019/12/13/noticias/1576234912_462797_1576235071_noticia_normal.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.split.right::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--right-bg);
+}
+
+.hover-left .left {
+    width: var(--hover-width);
+}
+
+.hover-left .right {
+    width: var(--other-width);
+}
+
+.hover-right .right {
+    width: var(--hover-width);
+}
+
+.hover-right .left {
+    width: var(--other-width);
+}
+
+.split.right,
+.right,
+.split.left,
+.left {
+    transition: 4s;
+}
+
+/********/
+
+
+.sitio-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: url(https://fondosmil.com/fondo/49754.jpg);
+    padding: 1rem 3%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    gap: 0.4rem;
+}
+
+.sitio-header .icono {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #fff;
+    gap: 1px;
+}
+
+.sitio-header .icono:hover {
+    color: var(--color-play);
+}
+
+.sitio-header #menu-btn {
+    display: none;
+}
+
+.sitio-header .navbar a {
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 2rem;
+    text-decoration: none;
+}
+
+.sitio-header .navbar a:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.sitio-header .navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: var(--color-play);
+}
+
+.sitio-header .navbar .espacio {
+    display: inline-block;
+    width: 20rem;
+}
+
+.sitio-header .logo {
+    position: absolute;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    top: 2.4rem;
+    left: 39%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.sitio-header .logo span {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--color-play);
+}
+
+.sitio-header .logo img {
+    width: 15rem;
+}
+
+.sitio-header .busqueda-form {
+    height: 7rem;
+    padding: 0 2rem;
+    border-top: 0.2rem solid var(--color-play);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background: #000;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.sitio-header .busqueda-form.active {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.sitio-header .busqueda-form input {
+    width: 100%;
+    background: none;
+    text-transform: none;
+    font-size: 1.6rem;
+    color: #fff;
+}
+
+.sitio-header .fa-times {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.carousel {
+    margin-top: 5rem;
+}
+
+.body-xbox .sitio-header .logo span {
+    color: var(--color-xbox);
+}
+
+.body-xbox .sitio-header .icono:hover {
+    color: var(--color-xbox);
+}
+
+.body-xbox .sitio-header .navbar a:hover {
+    text-decoration: underline;
+    text-underline-offset: 1rem;
+    color: var(--color-xbox);
+}
+
+.body-xbox .sitio-header .busqueda-form {
+    border-top: 0.2rem solid var(--color-xbox);
+}
+
+/**Destacados**/
+
+.destacados-slider .box {
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+
+.destacados-slider .box .image {
+    padding: 1rem;
+    background: rgba(3, 69, 250, 0.6);
+}
+
+.destacados-slider .box:hover .image {
+    transform: translateY(5rem);
+}
+
+.destacados-slider .box .image img {
+    height: 28rem;
+}
+
+.destacados-slider .box .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-play-dark);
+    z-index: 1;
+    transform: translateY(-105%);
+}
+
+.destacados-slider .box:hover .icons {
+    transform: translateY(0%);
+}
+
+.destacados-slider .box .icons a {
+    color: var(--white);
+    font-size: 2.2rem;
+    padding: 1.3rem 1.5rem;
+    text-decoration: none;
+}
+
+.destacados-slider .box .icons a:hover {
+    color: var(--color-play);
+}
+
+.destacados-slider .box .content {
+    background: var(--color-play-dark);
+    padding: 1.5rem;
+}
+
+.destacados-slider .box .content h3 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.destacados-slider .box .content .price {
+    font-size: 2.2rem;
+    color: var(--white);
+    padding-top: 1rem;
+}
+
+.destacados-slider .box .content .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+}
+
+
+.xbox-destacado .box .image {
+    padding: 1rem;
+    background: var(--color-xbox);
+}
+
+.xbox-destacado .box .icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--blacK);
+    z-index: 1;
+    transform: translateY(-105%);
+}
+
+.xbox-destacado .box .icons a:hover {
+    color: var(--color-xbox);
+}
+
+.xbox-destacado .box .content {
+    background: var(--blacK);
+    padding: 1.5rem;
+}
+
+/*Off*/
+
+.off-slider {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 2rem;
+    background-color: #fff;
+}
+
+.title-off {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title-off h2 {
+    font-size: 4rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+.title-off p {
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.title-off a {
+    width: 18rem;
+}
+
+.off-slider .img-off img {
+    width: 100%;
+}
+.xbox-off-slider {
+    grid-template-columns: 50% 50%;
+    background-color: rgb(2, 117, 26);
+    color: #fff;
+}
+
+.xbox-off-slider .img-off img {
+    width: 80%;
+}
+
+/*New product*/
+
+.new-slider {
+    margin: 4rem 0;
+}
+
+.new-slider .swiper-wrapper .box {
+    text-align: center;
+    border-radius: 2rem;
+}
+
+.img-new {
+    height: 28rem;
+    margin: 1rem 0;
+}
+
+.img-dig {
+    height: 24rem;
+    margin: 1rem 0;
+}
+
+.box:hover .img-new,
+.box:hover .img-dig {
+    transform: scale(.9);
+}
+
+.text-new {
+    background: var(--color-play-dark);
+    border-bottom-left-radius: 1.9rem;
+    border-bottom-right-radius: 1.9rem;
+    text-align: center;
+    padding: 1rem 0 2rem 0;
+}
+
+.box .text-new h3 {
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.price-new {
+    font-size: 2.2rem;
+    color: var(--white);
+    padding-top: .6rem;
+}
+
+.body-xbox .text-new {
+    background: var(--color-xbox-dark);
+}
+
+.body-xbox .swiper-wrapper .bg-black{
+    background: var(--blacK);
+}
+
+/*Joy off*/
+
+.joy-off {
+    grid-gap: 5rem;
+}
+
+.joy-off .img-off img {
+    width: 38rem;
+}
+
+.title-joy {
+    text-align: end;
+    padding-right: 5rem;
+}
+
+.bottom a {
+    margin: .5rem;
+}
+
+.body-xbox .joy-off {
+    background: rgb(2, 117, 26);
+}
+
+.body-xbox .joy-off .img-off img {
+    width: 58rem;
+}
+
+/*Service*/
+
+.box {
+    background: var(--color-play-dark);
+}
+
+.box i {
+    font-size: 5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.box h3 {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.box p {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.body-xbox .box {
+    background: var(--color-xbox-dark);
+}
+
+/*Blog*/
+
+.blog-site .heading-text h2 {
+    margin: 0 2rem 2rem 2rem;
+}
+
+.blog-site .blog-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(31rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+    gap: 2rem;
+}
+
+.blog-site .blog-container .blog-box {
+    position: relative;
+    background: var(--color-play-dark);
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+.blog-site .blog-container .blog-box:hover .imagen img {
+    transform: scale(1.1);
+
+}
+
+.blog-site .blog-container .blog-box:hover .imagen .iconos {
+    transform: translateY(0);
+}
+
+.blog-site .blog-container .blog-box .imagen {
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+    border-top-left-radius: 2rem;
+}
+
+.blog-site .blog-container .blog-box .imagen .iconos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background: var(--color-play);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transform: translateY(10rem);
+}
+
+
+.blog-site .blog-container .blog-box .imagen .iconos a i {
+    padding-right: .5rem;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.blog-site .blog-container .blog-box .imagen img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.blog-site .blog-container .blog-box .contenido {
+    text-align: center;
+    padding: 2rem;
+}
+
+.blog-site .blog-container .blog-box .contenido h3 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.blog-site .blog-container .blog-box .contenido p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #aaa;
+    padding: 1.5rem 0;
+}
+
+.body-xbox .blog-site .blog-container .blog-box {
+    background: var(--color-xbox-dark);
+}
+
+.body-xbox .blog-site .blog-container .blog-box .imagen .iconos {
+    background: var(--color-xbox);
+}
+
+/*Accesorio off*/
+
+.acc-off .title-off h2 {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
+}
+
+.acc-off .title-off p {
+    padding-bottom: 1rem;
+}
+
+/*Contactos*/
+
+.contacto-container {
+    gap: 2rem;
+}
+
+.contacto-container div {
+    background: var(--color-play-dark);
+    border-radius: 2rem;
+}
+
+.contacto-container div h2 {
+    text-align: center;
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.contacto-container div .iconos-red {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contacto-container div .iconos-red a i {
+    font-size: 3rem;
+    color: var(--white);
+}
+
+.contacto-container div .contact-inf {
+    display: block;
+    color: var(--white);
+}
+
+.contacto-container div .contact-inf h3 {
+    padding: .3rem;
+}
+
+.contacto-container div .contact-inf h3 i {
+    font-size: 1.6rem;
+}
+
+.contacto-container div .sub .box {
+    width: 80%;
+    margin: .7rem 0;
+    padding: 1rem 1.2rem;
+    font-size: 1.6rem;
+    color: var(--black);
+    border-radius: .5rem;
+    text-transform: none;
+    background: var(--white);
+}
+
+.body-xbox .contacto-container div {
+    background: var(--color-xbox-dark);
+    border-radius: 2rem;
+}
+
+/*Footer*/
+
+.site-footer{
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: url(https://fondosmil.com/fondo/49754.jpg);
+    padding: 1rem 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.site-footer .navbar a{
+    color: #fff;
+    font-size: 2rem;
+    margin: 0 2rem;
+    text-decoration: none;
+}
+
+.site-footer .navbar a:hover{
+    color: var(--color-play);
+    text-decoration: underline;
+}
+
+.site-footer .copyright{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+
+.site-footer .copyright h3 span{
+    color: var(--color-play);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.body-xbox .site-footer .navbar a:hover{
+    color: var(--color-xbox);
+    text-decoration: underline;
+}
+
+.body-xbox .site-footer .copyright h3 span{
+    color: var(--color-xbox);
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/*Media query*/
+
+@media (max-width: 1074px) {
+    * {
+        font-size: 60%;
+    }
+}
+
+@media (max-width: 970px) {
+    .sitio-header {
+        -webkit-box-pack: end;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        gap: 2rem;
+        padding: 2rem 7%;
+    }
+
+    .sitio-header .logo {
+        padding: 0 7%;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        left: 0;
+        top: 0;
+    }
+
+    .sitio-header #menu-btn {
+        display: inline-block;
+    }
+
+    .sitio-header .navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(10, 10, 138, 0.651);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .sitio-header .navbar.active {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .sitio-header .navbar a {
+        margin: 2rem 1rem;
+    }
+
+    .sitio-header .navbar a:nth-child(1) {
+        margin-left: 1rem;
+    }
+
+    .sitio-header .navbar .espacio {
+        display: none;
+    }
+
+    .off-slider {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .off-slider .img-off {
+        text-align: center;
+    }
+
+    .joy-off .title-joy {
+        text-align: start;
+    }
+
+}
+
+@media (max-width: 720px) {
+    * {
+        font-size: 50%;
+    }
+
+    .joy-off .img-off img {
+        width: 30rem;
+    }
+
+    .title-joy {
+        text-align: end;
+        padding-right: 2rem;
+    }
+
+    .blog-site .blog-container .blog-box .imagen .iconos a i {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 540px) {
+    * {
+        font-size: 40%;
+    }
+
+    h2 {
+        font-size: 4rem;
+        margin-bottom: 0;
+    }
+
+    .btn {
+        top: 33%;
+    }
+
+    .split.left {
+        background-position: center;
+    }
+
+    .split.right {
+        background-position: center;
+    }
+
+    .hover-left .left {
+        width: 50%;
+    }
+
+    .hover-left .right {
+        width: 50%;
+    }
+
+    .hover-right .right {
+        width: 50%;
+    }
+
+    .hover-right .left {
+        width: 50%;
+    }
+
+    .sitio-header .logo {
+        left: 0;
+        top: .9rem;
+        font-size: 3rem;
+    }
+
+    .sitio-header .logo span {
+        font-size: 3rem;
+    }
+
+    .carousel {
+        margin-top: 6rem;
+    }
+
+    .blog-site .blog-container .blog-box .imagen .iconos a i {
+        font-size: 1.5rem;
+    }
+}
